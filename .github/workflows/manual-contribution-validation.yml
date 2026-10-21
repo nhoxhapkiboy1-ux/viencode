@@ -1,0 +1,18 @@
+
+name: Manual Contribution Validation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate workflow
+        run: echo "GitHub Actions is running successfully!"
